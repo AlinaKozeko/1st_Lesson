@@ -180,6 +180,55 @@ namespace _1st_Lesson
              *  a0 = (№ in the group)
              *  S = 1ddmm of your birth day
              */
+                #region Task_1
+                Console.Write("Введите ваш рост в метрах(если число не целое, введите через запятую.)");
+            double height = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Введите ваш вес(если число не целое, введите через запятую.)");
+            double weight = Convert.ToDouble(Console.ReadLine());
+
+            double BMI = 0;
+
+            if (height < 0.54 && height > 0 && weight < 14 && weight > 0)
+            {
+                Console.WriteLine("Поздравляю! Ваш рост и вес меньше чем у самого маленького человека в мире! Благодаря вашей особенности вы можете попасть в книгу рекордов Гиннеса.");
+            }
+            else if (height <= 0 && weight <= 0)
+            {
+                Console.WriteLine("Ваш рост и вес не могут быть меньшими или равными нулю. Пожалуйста, введите положительные числа");
+            }
+            else 
+            {
+                BMI = (weight / (height * height));
+                Console.WriteLine(BMI);
+            }
+            #endregion
+    
+                #region Task_2
+                const int number = 15, age = 17;
+            double a = 100 % number;
+            double b = age - (a / number);
+            int grad = 10 * number;
+            double ellipse = Math.PI * (a + b);
+            double lenght = (ellipse * grad) / 360;
+            Console.WriteLine(lenght);
+            #endregion
+                
+                #region Task_3
+                int a0 = 15;
+            int dr = 12209;
+            if (!int.TryParse(Console.ReadLine(), out int s))
+            {
+                Console.WriteLine("Введено некорректно.");
+            }
+            else
+            {
+                double last = (dr / s) * 2 - a0;
+                double step = (last - a0) / (s - 1);
+                Console.WriteLine(step);
+            }
+            #endregion
+                
         }
     }
 }
