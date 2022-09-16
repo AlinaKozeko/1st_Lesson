@@ -227,6 +227,10 @@ namespace _1st_Lesson
                 double step = (last - a0) / (s - 1);
                 Console.WriteLine(step);
             }
+            else
+            {
+                Console.WriteLine("Пожалуйста, введите число больше 1.");
+            }
             #endregion
                 
         }
