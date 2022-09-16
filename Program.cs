@@ -221,7 +221,7 @@ namespace _1st_Lesson
             {
                 Console.WriteLine("Введено некорректно.");
             }
-            else
+            else if (s > 1)
             {
                 double last = (dr / s) * 2 - a0;
                 double step = (last - a0) / (s - 1);
